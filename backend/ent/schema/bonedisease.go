@@ -9,7 +9,10 @@ type Bonedisease struct {
 
 // Fields of the Bonedisease.
 func (Bonedisease) Fields() []ent.Field {
-	return nil
+	return []ent.Field{
+		field.String("UserEmail").NotEmpty(),
+		field.String("UserName").NotEmpty(),
+	}
 }
 
 // Edges of the Bonedisease.
